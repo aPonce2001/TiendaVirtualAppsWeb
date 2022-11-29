@@ -22,6 +22,7 @@
             $contrasenia = $_POST["contrasenia"];
             setcookie("cookie_usuario", $usuario);
             setcookie("cookie_contrasenia", $contrasenia);
+            setcookie("cookie_idioma", "es", time() + (60*60*24*30));
         }
     }
 ?>
