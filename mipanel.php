@@ -37,7 +37,7 @@
         <a href="mipanel.php?lang=es">ES(Español)</a> |
         <a href="mipanel.php?lang=en">EN(English)</a>
         <br/><br/>
-        <a href="cerrarsesion.php">Cerrar Sesion (Esta acción borrará las cookies)</a><br/>
+        <a href="cerrarsesion.php">Cerrar Sesión</a><br/>
         <?php
             //Ingreso a la página por GET
             if(isset($_GET["lang"])){
