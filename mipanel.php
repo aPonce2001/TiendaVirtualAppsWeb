@@ -22,8 +22,6 @@
             $contrasenia = $_POST["contrasenia"];
             setcookie("cookie_usuario", $usuario);
             setcookie("cookie_contrasenia", $contrasenia);
-            /*if(!isset($_COOKIE["cookie_idioma"]))
-                setcookie("cookie_idioma", $idiomaDefault, time() + (60*60*24*30));*/
         }
     }
 ?>
@@ -33,7 +31,6 @@
     <head>
     </head>
     <body>
-        <?php var_dump($_POST)?>
         <h1>PANEL PRINCIPAL</h1>
         <h3>Bienvenido Usuario: <?php echo $_SESSION["sesion_usuario"];?></h3>
         <a href="mipanel.php?lang=es">ES(Español)</a> |
