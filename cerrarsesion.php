@@ -1,12 +1,13 @@
 <?php
     session_start();
 
-    session_destroy();
+    if(!isset($_COOKIE["cookie_recuerdame"])){
+        setcookie("cookie_usuario", "");
+        setcookie("cookie_contrasenia", "");
+        setcookie("cookie_recuerdame", "");
+    }
 
-    setcookie("cookie_usuario", "");
-    setcookie("cookie_contrasenia", "");
-    setcookie("cookie_recuerdame", "");
-    setcookie("cookie_idioma", "");
+    session_destroy();
 
     header("Location:index.php");
 ?>
