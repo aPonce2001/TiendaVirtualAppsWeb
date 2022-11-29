@@ -10,6 +10,7 @@
 
     #Verificar si existe sesión
     if(!isset($_SESSION["sesion_usuario"]) && !isset($_SESSION["sesion_contrasenia"])){
+        $idioma = (isset($_COOKIE["cookie_idioma"]))?$_COOKIE["cookie_idioma"]:"";
         header("Location:index.php?auth=false");
     }
 
@@ -63,6 +64,11 @@
                 }
             }else{
                 echo "<h3>Seleccione un idioma / Select a language</h3>";
+            }
+
+            //Control de que el header no deja de ejecutar el script php del mipanel.php cuando voy a index, ¿Por qué?
+            if(isset($idioma)){
+                setcookie("cookie_idioma", $idioma, time() + (60*60*24*30));
             }
             
             while (isset($fp) && !feof($fp)){
